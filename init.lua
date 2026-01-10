@@ -92,7 +92,7 @@ require("lazy").setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     config = function()
-      require('nvim-treesitter').setup({
+      require('nvim-treesitter.configs').setup({
         auto_install = true,
         ensure_installed = {
           'go',
