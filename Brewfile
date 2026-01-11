@@ -1,8 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-tap "homebrew/services"
 tap "skeema/tap"
 
 # Core tools
@@ -14,9 +9,7 @@ brew "git"
 
 # Development
 brew "go"
-brew "node@20"
 brew "python@3.12"
-brew "postgresql@17"
 
 # CLI utilities
 brew "atuin"           # Shell history
@@ -34,7 +27,6 @@ brew "tree"            # Directory tree
 brew "watch"           # Run commands repeatedly
 brew "wget"            # Download tool
 brew "curl"            # Transfer tool
-brew "yt-dlp"          # YouTube downloader
 
 # Language servers & tools
 brew "lua-language-server"  # Neovim LSP
@@ -52,10 +44,6 @@ brew "gnu-getopt"
 brew "gnupg"
 brew "git-crypt"
 
-# Databases & services
-brew "mysql-client"
-brew "protobuf"
-brew "grpc"
 
 # Misc
 brew "colordiff"
@@ -65,7 +53,6 @@ brew "jhead"
 brew "neofetch"
 brew "pandoc"
 brew "telnet"
-brew "terraform"
 
 # Casks
 cask "docker"
