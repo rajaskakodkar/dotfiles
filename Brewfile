@@ -4,58 +4,70 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "skeema/tap"
-brew "python@3.9"
+
+# Core tools
 brew "bash"
-brew "bat"
-brew "gettext"
-brew "glib"
-brew "cairo"
-brew "colordiff"
-brew "coreutils"
-brew "curl"
-brew "detox"
-brew "direnv"
-brew "doctl"
-brew "exiftool"
-brew "pkg-config"
-brew "unbound"
-brew "harfbuzz"
-brew "ffmpeg"
 brew "fish"
-brew "fzf"
-brew "gdk-pixbuf"
-brew "gh"
-brew "git"
-brew "git-crypt"
-brew "gnu-getopt"
-brew "gnu-sed"
-brew "gnupg"
-brew "go"
-brew "graphviz"
-brew "grpc"
-brew "htop"
-brew "jhead"
-brew "jq"
-brew "jump"
-brew "kustomize"
-brew "mercurial"
-brew "nmap"
-brew "rbenv"
-brew "rclone"
-brew "reattach-to-user-namespace"
-brew "ripgrep"
-brew "ruby"
-brew "shellcheck"
-brew "sphinx-doc"
-brew "st"
-brew "the_silver_searcher"
-brew "tig"
 brew "tmux"
-brew "tree"
-brew "vault"
-brew "vim"
-brew "watch"
-brew "wget"
-brew "yarn"
-brew "youtube-dl"
-brew "z"
+brew "neovim"
+brew "git"
+
+# Development
+brew "go"
+brew "node@20"
+brew "python@3.12"
+brew "postgresql@17"
+
+# CLI utilities
+brew "atuin"           # Shell history
+brew "bat"             # Better cat
+brew "fd"              # Better find
+brew "fzf"             # Fuzzy finder
+brew "ripgrep"         # Better grep
+brew "zoxide"          # Better cd
+brew "direnv"          # Directory environments
+brew "jq"              # JSON processor
+brew "gh"              # GitHub CLI
+brew "tig"             # Git TUI
+brew "htop"            # Process viewer
+brew "tree"            # Directory tree
+brew "watch"           # Run commands repeatedly
+brew "wget"            # Download tool
+brew "curl"            # Transfer tool
+brew "yt-dlp"          # YouTube downloader
+
+# Language servers & tools
+brew "lua-language-server"  # Neovim LSP
+brew "gopls"                # Go LSP (via go install, but good to have)
+
+# Media & graphics
+brew "ffmpeg"
+brew "graphviz"
+brew "imagemagick"
+
+# System utilities
+brew "coreutils"
+brew "gnu-sed"
+brew "gnu-getopt"
+brew "gnupg"
+brew "git-crypt"
+
+# Databases & services
+brew "mysql-client"
+brew "protobuf"
+brew "grpc"
+
+# Misc
+brew "colordiff"
+brew "detox"
+brew "exiftool"
+brew "jhead"
+brew "neofetch"
+brew "pandoc"
+brew "telnet"
+brew "terraform"
+
+# Casks
+cask "docker"
+cask "ghostty"
+

@@ -1,58 +1,62 @@
 [user]
-	name = Rajas Kakodkar
-	email = rajaskakodkar16@gmail.com
+    name = Rajas Kakodkar
+    email = rajaskakodkar16@gmail.com
 
-[includeIf "gitdir:~/Code/ps/"]
-    	path = ~/Code/ps/gitconfig
 
 [alias]
-	st = status -sb
-	ci = commit
-	all = commit -am
-	br = branch
-	co = checkout
-	di = diff
-	dic = diff --cached
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ls = ls-files
-	# Show files ignored by git:
-	ign = ls-files -o -i --exclude-standard
+    st = status -sb
+    ci = commit
+    all = commit -am
+    br = branch
+    co = checkout
+    di = diff
+    dic = diff --cached
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    ign = ls-files -o -i --exclude-standard
+    shoot = push origin --delete
+    unstage = reset HEAD --
+    prev = checkout -
+    last = log -1 HEAD
+    reword = commit --amend
+    undo = reset --soft HEAD^
 
-	shoot = push origin --delete
-	unstage = reset HEAD --
-	prev = checkout -
-	discard = checkout -- 
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = nvim
+    pager = less -FRSX
 
 [color]
-	ui = auto
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
-[core]
-	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	editor = nvim
-	quotepath = false
-[credential]
-	helper = osxkeychain
-[github]
-	user = rajaskakodkar
-[mergetool]
-	keepBackup = true
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    ui = auto
+
 [push]
-	default = current
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+    # Push current branch to same-named remote branch
+    # Creates remote branch if it doesn't exist
+    default = current
+    autoSetupRemote = true
+    followTags = true
+
 [pull]
-	rebase = false
+    rebase = false
+
+[fetch]
+    prune = true
+    pruneTags = true
+
+[diff]
+    tool = vimdiff
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[url "git@github.com:"]
+    # Convert HTTPS to SSH (requires SSH keys set up)
+    # Test with: ssh -T git@github.com
+    insteadOf = https://github.com/
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
